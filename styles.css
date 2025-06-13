@@ -1,0 +1,1129 @@
+.review-1 {
+  align-content: center;
+  position: relative;
+  align-items: center;
+  align-self: center;
+}
+
+/* Container for slider */
+.swiper {
+  width: 100%;
+  padding: 20px 0;
+}
+
+/* Each slide sizing */
+.swiper-slide {
+  margin-left: 5%;
+  width: 100%;
+  /* let swiper control width */
+  /* Optional: set max width for cards */
+  /* max-width: 320px; */
+
+  display: flex;
+  justify-content: center;
+
+}
+
+/* Style your review card */
+.review-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+
+}
+
+/* Navigation button colors (optional) */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #000;
+  /* black arrows */
+  margin: 14%;
+}
+
+/* Pagination styling */
+.swiper-pagination-bullet {
+  background: #000;
+  opacity: 0.5;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.top-bar {
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  padding: 10px 50px;
+  padding-top: -100px;
+  font-size: 14px;
+  height: 100px;
+  margin-top: -28px;
+}
+
+.top-bar i {
+  color: #fad608;
+  margin-right: 19px;
+}
+
+.top-bar .highlight {
+  color: #f4bd07;
+  font-weight: bold;
+}
+
+nav {
+  background-color: #fff;
+  margin: 0 10%;
+  margin-top: 20px;
+  /* Positive margin to create space */
+  border-radius: 20px;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  /* Ensure stacking works */
+  z-index: 10;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  /* Optional for visual separation */
+}
+
+nav img {
+  height: 80px;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  margin: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #000;
+  font-size: 16px;
+}
+
+.btn-yellow {
+  background-color: #fad608;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 10px;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.hero-section {
+  height: 600px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 50px;
+  color: white;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-size: cover;
+  background-position: center;
+  animation: slideShow 10s infinite ease-in-out;
+}
+
+@keyframes slideShow {
+  0% {
+    background-image: url("images/banner_1.2.jpg");
+  }
+
+  50% {
+    background-image: url("images/banner_2-1.jpg");
+  }
+
+  100% {
+    background-image: url("images/banner_3.2.jpg");
+  }
+
+  /* 100% { background-image: url("banner_2-1.jpg"); } */
+
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+}
+
+.hero-content h1 {
+  color: #f4bd07;
+  font-size: 50px;
+  margin: 0;
+}
+
+.hero-content p {
+  font-size: 18px;
+  margin-top: 10px;
+  color: #fff;
+}
+
+.hero-content .btn-yellow {
+  margin-top: 30px;
+  padding: 15px 30px;
+  font-size: 16px;
+}
+
+
+.whatsapp-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.whatsapp-icon img {
+  width: 60px;
+}
+
+.booking-form-container {
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  padding: 30px;
+  max-width: 90%;
+  margin: -100px auto 50px;
+  /* Overlaps the hero section */
+  position: relative;
+  z-index: 5;
+  text-align: center;
+}
+
+.booking-form-container h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.features {
+  margin-bottom: 25px;
+  font-size: 16px;
+  color: #333;
+}
+
+.features span {
+  margin: 0 10px;
+  display: inline-block;
+}
+
+.features i {
+  color: green;
+  margin-right: 5px;
+}
+
+.booking-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.booking-form input,
+.booking-form select {
+  padding: 10px 15px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 200px;
+}
+
+.booking-form button {
+  width: 200px;
+  padding: 12px 25px;
+  background-color: #f4bd07;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  color: black;
+  font-size: 16px;
+}
+
+.services-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.service-card {
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  width: 300px;
+  height: 300px;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.service-card i {
+  padding-top: 25%;
+  font-size: 300%;
+  color: #f4bd07;
+  margin-bottom: 20px;
+}
+
+.service-card h3 {
+  font-size: 200%;
+  margin: 0 0 10px;
+  color: #000000;
+}
+
+.service-card p {
+  font-size: 15px;
+  color: #555;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.vehicle-selection {
+  padding: 60px 20px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.vehicle-selection h2 {
+  color: #000;
+  font-size: 250%;
+  margin-bottom: 30px;
+}
+
+.vehicle-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.vehicle-card {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 15px;
+  width: 350px;
+  height: auto;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+
+}
+
+.vehicle-card:hover {
+  transform: translateY(-5px);
+}
+
+.vehicle-card img {
+  width: 100%;
+  height: auto;
+  margin: 10px 0;
+}
+
+.vehicle-card .btn-yellow {
+  background-color: #f4bd07;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+
+}
+
+.vehicle-card p {
+  font-size: 12px;
+  color: #0a0a0a;
+  margin-top: 10px;
+}
+
+.vehicle-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.vehicle-selection h1 {
+  color: rgb(233, 51, 19);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #ffffff;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+h1 {
+  color: #fbbf24;
+  /* Amber-500 */
+  font-size: 24px;
+  margin-top: 40px;
+  text-transform: uppercase;
+}
+
+.subheading {
+  font-size: 14px;
+  color: #444;
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
+.description {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 0 20px 40px;
+
+}
+
+.card {
+  width: 220px;
+  height: 350px;
+  border-radius: 12px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: #fff;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+
+}
+
+.card:hover {
+  transform: scale(1.03);
+
+  opacity: 50%;
+}
+
+.card-content {
+
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  text-align: left;
+}
+
+.card-title {
+  font-size: 35px;
+  font-weight: bold;
+
+  margin-bottom: 10px;
+  text-decoration: none;
+}
+
+.card-arrow {
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.pricing-section {
+  max-width: 1200px;
+  margin: auto;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.subtitle {
+  color: #F4B400;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.title .dot {
+  color: #F4B400;
+}
+
+.description {
+  color: #666;
+  font-size: 16px;
+  margin: 10px auto 40px;
+  max-width: 700px;
+  line-height: 1.6;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+}
+
+.card1 {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  padding: 24px;
+  width: 300px;
+  text-align: left;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.card1.highlighted {
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+.badge {
+  background-color: #1a1a1a;
+  color: #fff;
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  position: relative;
+  top: -10px;
+}
+
+.badge.orange {
+  background-color: #F4B400;
+  color: #000;
+}
+
+.card1-text {
+  font-size: 14px;
+  color: inherit;
+  margin-bottom: 16px;
+}
+
+.card1-text.bold {
+  font-weight: 600;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 16px 0;
+}
+
+.details {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px;
+}
+
+.details li {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn.dark {
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+.btn.orange {
+  background-color: #F4B400;
+  color: #000;
+}
+
+
+.pricing-section {
+  max-width: 1200px;
+  margin: auto;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.subtitle {
+  color: #F4B400;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.title .dot {
+  color: #F4B400;
+}
+
+.description {
+  color: #666;
+  font-size: 16px;
+  margin: 10px auto 40px;
+  max-width: 700px;
+  line-height: 1.6;
+}
+
+.pricing-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+}
+
+.Pricing {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  padding: 24px;
+  width: 300px;
+  text-align: left;
+  position: relative;
+}
+
+.Pricing.highlighted {
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+.badge {
+  background-color: #1a1a1a;
+  color: #fff;
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  position: relative;
+  top: -10px;
+}
+
+.badge.orange {
+  background-color: #F4B400;
+  color: #000;
+}
+
+.Pricing-text {
+  font-size: 14px;
+  color: inherit;
+  margin-bottom: 16px;
+}
+
+.Pricing-text.bold {
+  font-weight: 600;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 16px 0;
+
+}
+
+.details {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+.details li {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+  /* border-bottom: 1px solid #eee; */
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.details li strong {
+  flex: 1;
+  font-weight: 600;
+  color: #000000;
+  text-decoration: none;
+}
+
+hr {
+  display: none;
+}
+
+
+
+/* .btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+} */
+
+.btn.dark {
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+/* .btn.orange {
+  background-color: #F4B400;
+  color: #000;
+} */
+.stats-section {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 40px 20px;
+  gap: 13%;
+}
+
+.stat-box {
+  text-align: center;
+  max-width: 180px;
+}
+
+.icon {
+  font-size: 40px;
+  color: #f4b400;
+  /* Yellow */
+  margin-bottom: 10px;
+}
+
+.stat-box h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin: 0;
+  color: #222;
+}
+
+.stat-box h2 span {
+  color: #f4b400;
+  margin-left: 5px;
+}
+
+.stat-box p {
+  color: #555;
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+.about-section {
+  padding: 40px;
+  font-family: 'Arial', sans-serif;
+  background-color: #fff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.about-container {
+  /* display: flex;
+  align-items: center; */
+  display: flex;
+  justify-content: center;
+  gap: 4%;
+  flex-wrap: wrap;
+}
+
+.about-image {
+  position: relative;
+  cursor: pointer;
+  max-width: 500px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* .about-image img {
+  width: 100%;
+  border-radius: 10px;
+} */
+
+/* .play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  color: #000;
+  border-radius: 50%;
+  padding: 18px;
+  font-size: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+} */
+
+.about-content {
+
+  flex: 1;
+  min-width: 100px;
+
+}
+
+.about-subtitle {
+  color: #1a2ec9;
+  font-size: 14px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.about-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.about-text {
+  font-size: 15px;
+  color: #333;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.about-founder {
+  text-align: right;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  /* z-index: 999; */
+  /* padding-top: 50px; */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+  margin: auto;
+  width: 80%;
+  max-width: 800px;
+  /* aspect-ratio: 16 / 9; */
+}
+
+.modal-content iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+
+.close {
+  color: white;
+  font-size: 30px;
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  cursor: pointer;
+}
+
+.video-container {
+  position: relative;
+  width: 50%;
+  max-width: 560px;
+  /* padding-bottom: 56.25%; 16:9 aspect ratio */
+  height: 0;
+  max-height: 300px;
+  border-radius: 20px;
+  margin-left: 6%;
+}
+
+.video-container iframe {
+  margin-top: 0px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 500px;
+  height: 300px;
+  border: none;
+}
+
+.modal-content {
+
+  width: 500px;
+  height: 300px;
+}
+
+.container {
+  text-align: center;
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.stars {
+  color: gold;
+  font-size: 22px;
+  margin: 5px 0;
+}
+
+.google-logo {
+  width: 100px;
+  height: 20px;
+}
+
+.summary {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+
+.review-slider-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  max-width: 1200px;
+  width: 100%;
+  gap: 10px;
+}
+
+.swiper {
+  padding-bottom: 60px;
+}
+
+.review-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  padding: 16px;
+  height: 100%;
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+}
+
+.user-info img,
+.circle-initial {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.circle-initial {
+  background-color: #f26d2f;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.user-info h4 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.review-date {
+  font-size: 12px;
+  color: #666;
+}
+
+.google-logo {
+  width: 20px;
+  height: 20px;
+}
+
+.review-stars {
+  color: #fbbc05;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.verified-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.review-text p {
+  font-size: 14px;
+  color: #333;
+  margin: 0 0 8px;
+  line-height: 1.4;
+}
+
+.read-more {
+  font-size: 13px;
+  color: #666;
+  text-decoration: none;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #333;
+}
+
+.swiper-pagination-bullet-active {
+  background: #007bff;
+}
+
+
+
+/* Make swiper-slide and review-card equal height */
+/* Equal height for swiper-slide and review-card */
+/* Ensure all swiper slides stretch equally */
+/* Parent Slide takes full height */
+.swiper-slide {
+  display: flex;
+  height: auto;
+  align-items: stretch;
+}
+
+/* Card fills full height of the slide */
+.review-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+  height: 220px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+/* Content grows to fill available space */
+.review-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+/* Text expands, and 'Read more' stays at bottom */
+.review-text {
+  flex-grow: 1;
+  margin-bottom: 10px;
+}
+
+/* Optional: Truncate long reviews with ellipsis */
+.review-text p {
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  /* Show 5 lines max */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+/* Read more link is pinned to the bottom */
+.read-more {
+  font-size: 13px;
+  color: #666;
+  text-decoration: none;
+  align-self: flex-start;
+  margin-top: auto;
+}
+
+
+.user-info img {
+  object-fit: cover;
+}
+
+.review-header h4 {
+  margin: 0 0 4px;
+  font-size: 15px;
+}
+
+/* Smaller and better aligned navigation arrows */
+.swiper-button-next,
+.swiper-button-prev {
+  width: 30px;
+  height: 30px;
+  background: rgba(0, 0, 0, 0.05);
+  color: #000;
+  border-radius: 50%;
+  top: 45%;
+  transform: translateY(-50%);
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 16px;
+}
+
+/* Optional: Position arrows a bit further from the edges */
+.swiper-button-next {
+  right: 10px;
+}
+
+.swiper-button-prev {
+  left: 10px;
+}
